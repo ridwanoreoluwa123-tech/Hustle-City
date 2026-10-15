@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#101810">
+    <title>Hustle City</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header class="topbar">
+    <div class="logo">HUSTLE<span>CITY</span></div>
+    <div class="money-box">
+        <small>YOUR CASH</small>
+        <strong id="money">₦50,000</strong>
+    </div>
+</header>
+
+<main>
+    <section class="game-heading">
+        <div>
+            <p class="eyebrow">LAGOS, NIGERIA 🇳🇬</p>
+            <h1>Explore the city</h1>
+        </div>
+        <button id="homeButton" class="home-button">DASHBOARD</button>
+    </section>
+
+    <div class="game-container">
+        <canvas id="gameCanvas" aria-label="Hustle City game. Use the movement controls to explore."></canvas>
+
+        <div class="location-tag" id="locationTag">
+            📍 City Streets
+        </div>
+
+        <div class="game-tip" id="gameTip">
+            Explore the city!
+        </div>
+    </div>
+
+    <section class="controls-section">
+        <div class="control-info">
+            <strong>YOUR CHARACTER</strong>
+            <span>Explore using the controls below</span>
+        </div>
+
+        <div class="controls">
+            <button class="direction up" data-dir="up" aria-label="Move up">▲</button>
+            <button class="direction left" data-dir="left" aria-label="Move left">◀</button>
+            <button class="direction down" data-dir="down" aria-label="Move down">▼</button>
+            <button class="direction right" data-dir="right" aria-label="Move right">▶</button>
+        </div>
+
+        <p class="control-hint">
+            Hold a direction to walk. Explore the buildings around you!
+        </p>
+    </section>
+
+    <section class="activity-panel">
+        <p class="eyebrow">YOUR NEXT MOVE</p>
+        <h2>City Activities</h2>
+
+        <div class="activity-grid">
+            <button class="activity" data-place="job">
+                <span>💼</span>
+                <strong>Find Work</strong>
+                <small>Earn money</small>
+            </button>
+
+            <button class="activity" data-place="business">
+                <span>🏪</span>
+                <strong>Business</strong>
+                <small>Build an empire</small>
+            </button>
+
+            <button class="activity" data-place="house">
+                <span>🏠</span>
+                <strong>Properties</strong>
+                <small>Buy a home</small>
+            </button>
+
+            <button class="activity" data-place="garage">
+                <span>🚘</span>
+                <strong>Garage</strong>
+                <small>Buy a car</small>
+            </button>
+        </div>
+    </section>
+
+    <div id="message" class="message" role="status">
+        Welcome to Hustle City!
+    </div>
+</main>
+
+<footer>HUSTLE CITY © 2026 · BUILD YOUR OWN EMPIRE</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

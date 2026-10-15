@@ -1,0 +1,303 @@
+:root {
+--bg: #0c110e;
+--panel: #172019;
+--green: #52f59a;
+--text: #f3f7f3;
+--muted: #a1afa4;
+--border: #2b392f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+background: var(--bg);
+color: var(--text);
+font-family: Arial, sans-serif;
+min-height: 100vh;
+}
+
+button {
+font: inherit;
+-webkit-tap-highlight-color: transparent;
+}
+
+.topbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px;
+background: #121a14;
+border-bottom: 1px solid var(--border);
+}
+
+.logo {
+font-weight: 900;
+letter-spacing: 1px;
+font-size: 19px;
+}
+
+.logo span {
+color: var(--green);
+}
+
+.money-box {
+display: flex;
+flex-direction: column;
+text-align: right;
+gap: 3px;
+}
+
+.money-box small {
+font-size: 9px;
+color: var(--muted);
+letter-spacing: 1px;
+}
+
+.money-box strong {
+color: var(--green);
+font-size: 17px;
+}
+
+main {
+max-width: 750px;
+margin: auto;
+padding: 18px 14px 30px;
+}
+
+.game-heading {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 10px;
+margin-bottom: 17px;
+}
+
+.eyebrow {
+color: var(--green);
+font-size: 10px;
+font-weight: bold;
+letter-spacing: 1.5px;
+}
+
+h1 {
+font-size: 23px;
+margin-top: 5px;
+}
+
+.home-button {
+background: #26362a;
+border: 1px solid #405444;
+color: var(--green);
+border-radius: 8px;
+padding: 10px;
+font-size: 9px;
+font-weight: bold;
+}
+
+.game-container {
+position: relative;
+width: 100%;
+overflow: hidden;
+background: #688b4e;
+border: 2px solid #354d39;
+border-radius: 13px;
+line-height: 0;
+}
+
+#gameCanvas {
+display: block;
+width: 100%;
+height: auto;
+touch-action: none;
+}
+
+.location-tag {
+position: absolute;
+top: 10px;
+left: 10px;
+background: #111cdd;
+background: rgba(12, 20, 14, 0.88);
+color: white;
+padding: 9px 11px;
+border-radius: 8px;
+font-size: 11px;
+line-height: 1.4;
+}
+
+.game-tip {
+position: absolute;
+bottom: 10px;
+left: 10px;
+right: 10px;
+background: rgba(12, 20, 14, 0.85);
+color: var(--green);
+text-align: center;
+padding: 9px;
+border-radius: 8px;
+font-size: 11px;
+line-height: 1.4;
+}
+
+.controls-section {
+margin-top: 22px;
+padding: 17px;
+border: 1px solid var(--border);
+background: var(--panel);
+border-radius: 13px;
+}
+
+.control-info {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.control-info strong {
+font-size: 12px;
+}
+
+.control-info span,
+.control-hint {
+font-size: 11px;
+color: var(--muted);
+}
+
+.controls {
+display: grid;
+grid-template-columns: repeat(3, 58px);
+grid-template-rows: repeat(2, 48px);
+gap: 7px;
+justify-content: center;
+margin: 20px auto 15px;
+}
+
+.direction {
+border: 1px solid #405444;
+background: #26382b;
+color: var(--green);
+border-radius: 11px;
+font-size: 20px;
+touch-action: none;
+user-select: none;
+}
+
+.direction:active {
+background: #3b6747;
+}
+
+.up {
+grid-column: 2;
+grid-row: 1;
+}
+
+.left {
+grid-column: 1;
+grid-row: 2;
+}
+
+.down {
+grid-column: 2;
+grid-row: 2;
+}
+
+.right {
+grid-column: 3;
+grid-row: 2;
+}
+
+.control-hint {
+text-align: center;
+line-height: 1.5;
+}
+
+.activity-panel {
+margin-top: 28px;
+}
+
+.activity-panel h2 {
+font-size: 22px;
+margin: 5px 0 15px;
+}
+
+.activity-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 10px;
+}
+
+.activity {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 6px;
+padding: 15px;
+min-height: 125px;
+background: var(--panel);
+border: 1px solid var(--border);
+border-radius: 12px;
+color: var(--text);
+text-align: left;
+}
+
+.activity > span {
+font-size: 25px;
+}
+
+.activity strong {
+font-size: 13px;
+}
+
+.activity small {
+font-size: 11px;
+color: var(--muted);
+}
+
+.activity:active {
+border-color: var(--green);
+transform: scale(0.98);
+}
+
+.message {
+display: none;
+margin-top: 18px;
+padding: 14px;
+border: 1px solid #3d6548;
+background: #182b1e;
+border-radius: 10px;
+color: var(--green);
+font-size: 12px;
+line-height: 1.6;
+white-space: pre-line;
+}
+
+.message.show {
+display: block;
+}
+
+footer {
+padding: 23px 12px;
+text-align: center;
+color: var(--muted);
+border-top: 1px solid var(--border);
+font-size: 9px;
+letter-spacing: 1px;
+}
+
+@media (max-width: 380px) {
+main {
+padding: 14px 10px 25px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.home-button {
+    padding: 9px 7px;
+}
+
+}
